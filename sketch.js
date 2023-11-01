@@ -11,7 +11,7 @@ var obstaclesGroup, obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obsta
 // pontuação
 var score;
 //7. Atribua as variáveis e carregue as imagens para gameover (fim de jogo) e restart(reiniciar)
-var gameOver, restart;
+
 
 function preload(){
   trex_running = loadAnimation("trex1.png","trex3.png","trex4.png");
@@ -28,9 +28,8 @@ function preload(){
   obstacle5 = loadImage("obstacle5.png");
   obstacle6 = loadImage("obstacle6.png");
   //7 imagens no game over e restart preLOad
-  gameOverImg = loadImage("gameOver.png");
-  restartImg = loadImage("restart.png");
-  
+
+ 
 }
 
 function setup() {
@@ -47,14 +46,10 @@ function setup() {
   ground.velocityX = -4;
 
   //7 criar  imagens e scale game over e restart
-  gameOver = createSprite(300,100);
-  gameOver.addImage(gameOverImg);
-  
-  restart = createSprite(300,140);
-  restart.addImage(restartImg);
-  
-  gameOver.scale = 0.5;
-  restart.scale = 0.5;
+
+
+
+ 
 
   invisibleGround = createSprite(200,190,400,10);
   invisibleGround.visible = false;
@@ -109,9 +104,7 @@ function draw() {
   ground.velocityX= 0;
 
   //7 game over e restart visivel verdadeiro
-  gameOver.visible = true;
-  restart.visible = true;
-
+ 
 
 
   //5. Dê velocidade zero a todos os obstáculos e nuvens usando setVelocityXEach()
